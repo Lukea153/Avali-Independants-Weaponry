@@ -1,0 +1,68 @@
+{
+  "itemName" : "aig-railgun",
+  "price" : 1250,
+  "level" : 6,
+  "maxStack" : 1,
+  "rarity" : "Rare",
+  "description" : "A powerful railgun normally mounted onto heavy drones or vehicles.",
+  "shortdescription" : "AIG Goliath Railgun",
+  "tooltipKind" : "gun",
+  "category" : "railgun",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","railgun","upgradeableWeapon"],
+
+  "inventoryIcon" : "aig-railgun.png",
+
+  "animation" : "aig-railgun.animation",
+  "animationParts" : {
+    "middle" : "aig-railgun.png",
+    "middlefullbright" : "aig-railgunfullbright.png"
+  },
+  "animationCustom" : { },
+
+  "elementalType" : "physical",
+
+  "primaryAbilityType" : "",
+  "primaryAbility" : {
+	"scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+	"class" : "GunFire",
+	
+    "fireTime" : 0.8,
+    "baseDps" : 10,
+	"energyUsage" : 30,
+    "projectileCount" : 1,
+    "inaccuracy" : 0.015,
+	
+	"projectileType" : "spaceplasma",
+    "projectileParameters" : {},
+	
+	"stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 3,
+        "weaponRotation" : 3,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : true
+      },
+      "cooldown" : {
+        "duration" : 0.1,
+        "armRotation" : 3,
+        "weaponRotation" : 3,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : true
+      }
+    }
+  }
+}
