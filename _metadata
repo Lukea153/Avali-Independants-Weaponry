@@ -4,9 +4,9 @@
   "description" : "A mod that adds several independant themed weapons for Avali which are designed to fit better in Starbound's artstyle compared to the original mod. Possible expansion of scope later.",
   "author" : "Lukea153",
   "version" : "0.0.1",
-  "link" : "NA",
-  "steamContentId" : "NA",
+  "link" : "",
+  "steamContentId" : "",
   "tags" : "Weapons",
   "includes" : [],
-  "requires" : [Avali]
+  "requires" : ["Avali"]
 }

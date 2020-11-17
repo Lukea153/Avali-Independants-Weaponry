@@ -7,33 +7,32 @@
   "description" : "A powerful railgun normally mounted onto heavy drones or vehicles.",
   "shortdescription" : "AIG Goliath Railgun",
   "tooltipKind" : "gun",
-  "category" : "railgun",
+  "category" : "sniperRifle",
   "twoHanded" : true,
-  "itemTags" : ["weapon","ranged","railgun","upgradeableWeapon"],
+  "itemTags" : ["weapon","ranged","rifle","upgradeableWeapon"],
 
   "inventoryIcon" : "aig-railgun.png",
 
   "animation" : "aig-railgun.animation",
   "animationParts" : {
-    "middle" : "aig-railgun.png",
-    "middlefullbright" : "aig-railgunfullbright.png"
+    "gun" : "aig-railgun.png",
+    "guncharge" : "aig-railguncharge.png"
   },
   "animationCustom" : { },
 
   "elementalType" : "physical",
 
-  "primaryAbilityType" : "",
   "primaryAbility" : {
 	"scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
 	"class" : "GunFire",
 	
-    "fireTime" : 0.8,
+    "fireTime" : 1.8,
     "baseDps" : 10,
 	"energyUsage" : 30,
     "projectileCount" : 1,
     "inaccuracy" : 0.015,
 	
-	"projectileType" : "spaceplasma",
+	"projectileType" : "railgun2",
     "projectileParameters" : {},
 	
 	"stances" : {
