@@ -3,27 +3,53 @@
   "price" : 1250,
   "level" : 6,
   "maxStack" : 1,
-  "rarity" : "Rare",
+  "rarity" : "Legendary",
   "description" : "A powerful railgun normally mounted onto heavy drones or vehicles.",
   "shortdescription" : "AIG Goliath Railgun",
   "tooltipKind" : "gun",
   "category" : "sniperRifle",
   "twoHanded" : true,
-  "itemTags" : ["weapon","ranged","rifle","upgradeableWeapon"],
+  "itemTags" : ["weapon","ranged","rifle"],
 
   "inventoryIcon" : "aig-railgun.png",
 
   "animation" : "aig-railgun.animation",
   "animationParts" : {
-    "gun" : "aig-railgun.png",
-    "guncharge" : "aig-railguncharge.png"
+    "middle" : "aig-railgun.png",
+    "middleFullbright" : "aig-railguncharge.png",
+	"muzzleFlash" : "/items/active/weapons/ranged/muzzleflash/aig-muzzleflashlarge.png"
   },
-  "animationCustom" : { },
+
+  "animationCustom" : {
+	"animatedParts" : {
+      "parts" : {
+        "middle" : {
+		  "properties" : {
+			//Same as BaseOffset
+		    "offset" : [1.4, 0.2]
+		  }
+		},
+		"middleFullbright" : {
+		  "properties" : {
+			//Same as BaseOffset
+		    "offset" : [1.4, 0.2]
+		  }
+		}
+      }
+    },
+    "sounds" : {
+      "fire" : [ "/sfx/gun/plasma_sniper4.ogg" ]
+    }
+  },
+  "baseOffset" : [1.4, 0.2],
+  "muzzleOffset" : [2.1, 0.3],
+  
+  "scripts" : ["/items/active/weapons/ranged/aig-gun.lua"],
 
   "elementalType" : "physical",
 
   "primaryAbility" : {
-	"scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+	"scripts" : ["/items/active/weapons/ranged/abilities/aig-gunfire.lua"],
 	"class" : "GunFire",
 	
     "fireTime" : 1.8,
@@ -31,6 +57,7 @@
 	"energyUsage" : 30,
     "projectileCount" : 1,
     "inaccuracy" : 0.015,
+	"cooldownTime" : 0.8,
 	
 	"projectileType" : "railgun2",
     "projectileParameters" : {},

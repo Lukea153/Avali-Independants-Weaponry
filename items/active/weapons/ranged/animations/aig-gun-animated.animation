@@ -25,7 +25,7 @@
         "states" : {
           "off" : {},
           "fire" : {
-            "frames" : 5,
+            "frames" : 2,
             "cycle" : 0.07,
             "mode" : "transition",
             "transition" : "off"

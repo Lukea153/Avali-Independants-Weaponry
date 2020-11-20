@@ -5,27 +5,12 @@
 
   "animatedParts" : {
     "stateTypes" : {
-      "weapon" : {
-        "default" : "idle",
-        "states" : {
-          "idle" : {
-            "frames" : 1,
-            "cycle" : 1.0,
-            "mode" : "loop"
-		  },
-          "active" : {
-            "frames" : 4,
-            "cycle" : 0.5,
-            "mode" : "loop"
-          }
-        }
-      },
-	  "firing" : {
+      "firing" : {
         "default" : "off",
         "states" : {
           "off" : {},
           "fire" : {
-            "frames" : 5,
+            "frames" : 2,
             "cycle" : 0.07,
             "mode" : "transition",
             "transition" : "off"
@@ -37,46 +22,21 @@
     "parts" : {
       "middle" : {
         "properties" : {
+          "zLevel" : 0,
           "centered" : true,
+          "image" : "<partImage><paletteSwaps>",
           "offset" : [0, 0], // x offset is set dynamically
           "transformationGroups" : ["weapon"]
-        },
-        "partStates" : {
-          "weapon" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle.<frame>"
-              }
-            },
-			"active" : {
-              "properties" : {
-                "image" : "<partImage>:active.<frame>"
-              }
-            }
-          }
         }
       },
 	  "middleFullbright" : {
         "properties" : {
           "zLevel" : 1,
           "centered" : true,
+          "image" : "<partImage><paletteSwaps>",
           "offset" : [0, 0], // x offset is set dynamically
 		  "fullbright" : true,
           "transformationGroups" : ["weapon"]
-        },
-        "partStates" : {
-          "weapon" : {
-            "idle" : {
-              "properties" : {
-                "image" : "<partImage>:idle.<frame>"
-              }
-            },
-			"active" : {
-              "properties" : {
-                "image" : "<partImage>:active.<frame>"
-              }
-            }
-          }
         }
       },
       "muzzleFlash" : {
@@ -87,6 +47,7 @@
           "fullbright" : true,
           "transformationGroups" : ["muzzle"]
         },
+
         "partStates" : {
           "firing" : {
             "fire" : {
