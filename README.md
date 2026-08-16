@@ -1,2 +1,2 @@
 # Avali-Independants-Weaponry
- WIP mod for Starbound and Avali Triage
+ WIP unfinished mod for Starbound and Avali Triage
